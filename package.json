@@ -1,0 +1,27 @@
+{
+  "name": "earlybirds",
+  "version": "1.0.0",
+  "description": "landing Page for earlyBirds Brand",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:sass devserver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morgrace/earlyBirds.git"
+  },
+  "author": "LordMorgrace",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Morgrace/earlyBirds/issues"
+  },
+  "homepage": "https://github.com/Morgrace/earlyBirds#readme",
+  "devDependencies": {
+    "sass": "^1.83.1"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

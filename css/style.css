@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Mono", "Courier New", Courier, monospace;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url(../../fonts/Space_Mono/SpaceMono-Regular.woff2) format("woff2"), url(../../fonts/Space_Mono/SpaceMono-Regular.woff) format("woff"), url(../../fonts/Space_Mono/SpaceMono-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Anton";
+  src: url(../../fonts/Anton/Anton-Regular.woff2) format("woff2"), url(../../fonts/Anton/Anton-Regular.woff) format("woff"), url(../../fonts/Anton/Anton-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*# sourceMappingURL=style.css.map */
