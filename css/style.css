@@ -1,3 +1,14 @@
+/* Keyframes for moving the text */
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+    /* Start from the left side */
+  }
+  100% {
+    transform: translateX(-220%);
+    /* Move completely out from the left side */
+  }
+}
 *,
 *::before,
 *::after {
@@ -12,6 +23,10 @@ html {
 
 body {
   font-family: "Space Mono", "Courier New", Courier, monospace;
+  font-size: 1.8rem;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  line-height: 2.4;
   box-sizing: border-box;
 }
 
@@ -28,6 +43,93 @@ body {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+.header {
+  display: grid;
+}
+.header__welcome-message {
+  position: relative;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #1D1D1B;
+}
+.header__welcome-message span {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  right: 0;
+  animation: moveText 45s linear infinite;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  border-bottom: 1px solid #707070;
+}
+.navigation__list {
+  display: flex;
+  align-items: center;
+}
+.navigation__list--left {
+  grid-column: 1/2;
+}
+.navigation__list--left > *::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-image: url("../../img/underline.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-400%);
+}
+.navigation__list--right {
+  grid-column: 3/4;
+  justify-self: end;
+}
+.navigation__list--right > *:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-image: url("../../img/underline.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-400%);
+}
+.navigation__item {
+  list-style: none;
+  padding: 1.3rem 1.5rem;
+}
+.navigation__item.border {
+  border-left: 1px solid #1D1D1B;
+}
+.navigation__item.border a {
+  display: flex;
+  align-items: center;
+}
+.navigation__link, .navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #202020;
+  transition: transform 0.5s;
+  will-change: transform;
+}
+.navigation__link svg {
+  width: 4rem;
+  height: 4rem;
+}
+.navigation__link:hover {
+  transform: scale(1.05);
+}
+.navigation__img {
+  grid-column: 2/3;
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */

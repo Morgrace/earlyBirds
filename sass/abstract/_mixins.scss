@@ -1,0 +1,12 @@
+@mixin underlineExLastChild($notLastChild: '') {
+    &#{$notLastChild}::after {
+        content: '';
+        display: block;
+        width: 5rem;
+        height: .3rem;
+        background-image: url('../../img/underline.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(-400%);
+    }
+}

@@ -1,0 +1,25 @@
+@use '../abstract/variables' as *;
+
+.header {
+    display: grid;
+
+    &__welcome-message {
+        position: relative;
+        width: 100%;
+        padding: 3rem;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background-color: $color-black-2;
+
+        span {
+            position: absolute;
+            color: $color-white-1;
+            font-size: 1.4rem;
+            line-height: 1.4;
+            right: 0;
+            animation: moveText 45s linear infinite;
+        }
+
+    }
+}

@@ -14,5 +14,10 @@ html {
 
 body {
     font-family: $font-body;
+    font-size: 1.8rem;
+    font-weight: 400;
+    background-color: $color-white-1;
+    line-height: 2.4;
+
     box-sizing: border-box;
 }

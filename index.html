@@ -10,10 +10,12 @@
   </head>
   <body>
     <header class="header">
-      <span class="header__welcome-message"
-        >Welcome to Early Birds. We ship every Tuesday and Thursday. Free
-        shipping above $25 in The Netherlands.</span
-      >
+      <div class="header__welcome-message">
+        <span
+          >Welcome to Early Birds. We ship every Tuesday and Thursday. Free
+          shipping above $25 in The Netherlands.</span
+        >
+      </div>
       <nav class="navigation">
         <ul class="navigation__list navigation__list--left">
           <li class="navigation__item">
@@ -29,16 +31,20 @@
             <a href="" class="navigation__link">Blog</a>
           </li>
         </ul>
-        <img src="img/logo-black-1..png" alt="logo" class="navigation__logo" />
-        <ul class="navigation__list navigation__list--left">
+        <img src="img/logo-black-1..png" alt="logo" class="navigation__img" />
+        <ul class="navigation__list navigation__list--right">
           <li class="navigation__item">
             <a href="" class="navigation__link">cart(0)</a>
           </li>
           <li class="navigation__item">
             <a href="" class="navigation__link">search</a>
           </li>
-          <li class="navigation__item">
-            <a href="" class="navigation__link">star⭐insert</a>
+          <li class="navigation__item border">
+            <a href="" class="navigation__link">
+              <svg>
+                <use href="img/svg/icomoon/sprite.svg#icon-star"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>

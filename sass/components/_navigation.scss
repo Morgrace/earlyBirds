@@ -1,0 +1,77 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    border-bottom: 1px solid $color-black-4;
+
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+        &--left {
+            grid-column: 1/2;
+
+            &>* {
+                @include underlineExLastChild;
+            }
+
+        }
+
+        &--right {
+            grid-column: 3 / 4;
+            justify-self: end;
+
+            &>* {
+                @include underlineExLastChild(':not(:last-child)');
+            }
+
+        }
+    }
+
+    &__item {
+        list-style: none;
+        padding: 1.3rem 1.5rem;
+
+        &.border {
+            border-left: 1px solid $color-black-2;
+
+            a {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__link {
+
+        &,
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.7rem;
+            color: $color-black-3;
+            transition: transform .5s;
+            will-change: transform;
+        }
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+
+
+    &__img {
+        grid-column: 2/3;
+        align-self: center;
+    }
+}
